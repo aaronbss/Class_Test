@@ -1,8 +1,8 @@
 class Student:
-    def __init__(self, stud_num, stud_nam, course_num):
-        self.stud_num = [8]
+    def __init__(self):
+        self.stud_num = []
         self.stud_nam = []
-        self.course_num = [7]
+        self.course_num = []
         n = int(input("Please enter the number of students ou want to register"))
         for i in range(1, n+1):
             self.stud_num[i] = input("Please enter the Student Number ")
@@ -10,13 +10,15 @@ class Student:
             self.course_num = input("Please enter the Course Number")
 
     def retrieve(self):
-        
+        for i in range(2, len(self.stud_num)):
+            if self.stud_num[1]<self.stud_num[i+1]:
+                continue
+            else:
+                self.stud_num[1] = self.stud_num[i]
+
+        print("The lowest student number retrieved is", self.stud_num[1])
 
 
+num = retrieve()
 
-
-
-
-
-
-obj = Student("10758","Aaron", "20A")
+###x
