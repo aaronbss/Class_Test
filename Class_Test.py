@@ -15,7 +15,7 @@ class Student:
             self.stud_nam.append(input("Please enter student name"))
             self.course_num.append(int(input("Please enter the course ID")))
 
-            print(self.stud_nam)
+        print(self.stud_nam)
 
     def retrieve(self):
         x = np.array([1])
