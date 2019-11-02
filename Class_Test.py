@@ -8,9 +8,9 @@ class Student:
     def add_value(self):
         n = int(input("Please enter the number of students you want to register"))
         for i in range(1, n+1):
-            self.stud_num[i].append(input("Please enter the Student number"))
-            self.stud_nam[i].append(input("Please enter student name"))
-            self.course_num[i].append(input("Please enter the course ID"))
+            self.stud_num.append(int(input("Please enter the student number")))
+            self.stud_nam.append(input("Please enter student name"))
+            self.course_num.append(int(input("Please enter the course ID")))
 
     def retrieve(self):
         for k in range(2, len(self.stud_num)):
@@ -25,3 +25,5 @@ class Student:
 
 
 obj = Student()
+obj.add_value()
+obj.retrieve()
