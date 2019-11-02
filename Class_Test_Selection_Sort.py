@@ -7,12 +7,14 @@ class Student:
 
     def add_value(self):
         n = int(input("Please enter the number of students you want to register"))
-        while n > 0:
+        if n > 0:
             for i in range(1, n+1):
                 self.stud_num.append(int(input("Please enter the student number")))
                 self.stud_nam.append(input("Please enter student name"))
                 self.course_num.append(int(input("Please enter the course ID")))
-
+        else:
+            print("The value entered is wrong")
+            
         print(self.stud_nam)
         print(self.stud_num)
         print(self.course_num)
