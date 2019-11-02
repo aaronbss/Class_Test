@@ -24,6 +24,8 @@ class Student:
                     min_index = j
             if min_index != i:
                 self.stud_num[i], self.stud_num[min_index] = self.stud_num[min_index], self.stud_num[i]
+                self.stud_nam[i], self.stud_nam[min_index] = self.stud_nam[min_index], self.stud_nam[i]
+                self.course_num[i], self.course_num[min_index] = self.course_num[min_index], self.course_num[i]
 
         for i in range(0, 1):
             print("The lowest student number, Name, Course ID retrieved is", self.stud_num[i], self.stud_nam[i], self.course_num[i])
