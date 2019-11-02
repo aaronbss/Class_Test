@@ -16,18 +16,21 @@ class Student:
             self.course_num.append(int(input("Please enter the course ID")))
 
         print(self.stud_nam)
+        print(self.stud_num)
+        print(self.course_num)
 
     def retrieve(self):
-        x = np.array([1])
-        for k in range(2, len(self.stud_num)):
-            if self.stud_num[x] < self.stud_num[k+1]:
-                continue
-            else:
-                self.stud_num[x].replace(self.stud_num[k])
-                self.stud_nam[x].replace(self.stud_nam[k])
-                self.course_num[x].replace(self.course_num[k])
+        for j in range(1,2):
+            for k in range(2, len(self.stud_num)):
+                if self.stud_num[j] < self.stud_num[k+1]:
+                    continue
+                else:
+                    self.stud_num[j].replace(self.stud_num[k])
+                    self.stud_nam[j].replace(self.stud_nam[k])
+                    self.course_num[j].replace(self.course_num[k])
 
-        print("The lowest student number, Name, Curse ID retrieved is", self.stud_num[1], self.stud_nam[1], self.course_num[1])
+        for i in range(1, 2):
+            print("The lowest student number, Name, Curse ID retrieved is", self.stud_num[i], self.stud_nam[i], self.course_num[i])
 
 
 obj = Student()
