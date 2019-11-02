@@ -22,7 +22,7 @@ class Student:
     def retrieve(self):
         for j in range(1, 2):
             for k in range(2, len(self.stud_num)):
-                if self.stud_num[j] < self.stud_num[k+1]:
+                if self.stud_num[j] < self.stud_num[k]:
                     continue
                 else:
                     self.stud_num[j].replace(self.stud_num[k])
@@ -30,7 +30,7 @@ class Student:
                     self.course_num[j].replace(self.course_num[k])
 
         for i in range(1, 2):
-            print("The lowest student number, Name, Curse ID retrieved is", self.stud_num[i], self.stud_nam[i], self.course_num[i])
+            print("The lowest student number, Name, Course ID retrieved is", self.stud_num[i], self.stud_nam[i], self.course_num[i])
 
 
 obj = Student()
