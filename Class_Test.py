@@ -1,3 +1,6 @@
+import numpy as np
+
+
 class Student:
 
     def __init__(self, a=[], b=[], c=[]):
@@ -12,15 +15,17 @@ class Student:
             self.stud_nam.append(input("Please enter student name"))
             self.course_num.append(int(input("Please enter the course ID")))
 
+            print(self.stud_nam)
+
     def retrieve(self):
-        x = 1
+        x = np.array([1])
         for k in range(2, len(self.stud_num)):
             if self.stud_num[x] < self.stud_num[k+1]:
                 continue
             else:
-                self.stud_num[1].replace(self.stud_num[k])
-                self.stud_nam[1].replace(self.stud_nam[k])
-                self.course_num[1].replace(self.course_num[k])
+                self.stud_num[x].replace(self.stud_num[k])
+                self.stud_nam[x].replace(self.stud_nam[k])
+                self.course_num[x].replace(self.course_num[k])
 
         print("The lowest student number, Name, Curse ID retrieved is", self.stud_num[1], self.stud_nam[1], self.course_num[1])
 
