@@ -17,13 +17,13 @@ class Student:
         print(self.course_num)
 
     def retrieve(self):
-        for i in range(0, len(A) - 1):
+        for i in range(0, len(self.stud_num) - 1):
             min_index = i
-            for j in range(i + 1, len(A)):
-                if A[j] < A[min_index]:
+            for j in range(i + 1, len(self.stud_num)):
+                if self.stud_num[j] < self.stud_num[min_index]:
                     min_index = j
             if min_index != i:
-                A[i], A[min_index] = A[min_index], A[i]
+                self.stud_num[i], self.stud_num[min_index] = self.stud_num[min_index], self.stud_num[i]
 
         for i in range(0, 1):
             print("The lowest student number, Name, Course ID retrieved is", self.stud_num[i], self.stud_nam[i], self.course_num[i])
