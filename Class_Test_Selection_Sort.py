@@ -12,9 +12,9 @@ class Student:
             self.stud_nam.append(input("Please enter student name"))
             self.course_num.append(int(input("Please enter the course ID")))
 
-        print(self.stud_nam)
-        print(self.stud_num)
-        print(self.course_num)
+        print("Names of students", self.stud_nam)
+        print("Student Number", self.stud_num)
+        print("Course Number", self.course_num)
 
     def retrieve(self):
         for i in range(0, len(self.stud_num) - 1):
