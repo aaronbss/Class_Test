@@ -13,8 +13,9 @@ class Student:
             self.course_num.append(int(input("Please enter the course ID")))
 
     def retrieve(self):
+        x = 1
         for k in range(2, len(self.stud_num)):
-            if self.stud_num[1] < self.stud_num[k+1]:
+            if self.stud_num[x] < self.stud_num[k+1]:
                 continue
             else:
                 self.stud_num[1].replace(self.stud_num[k])
