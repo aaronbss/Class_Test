@@ -29,6 +29,14 @@ class Student:
 
         for i in range(0, 1):
             print("The lowest student number, Name, Course ID retrieved is", self.stud_num[i], self.stud_nam[i], self.course_num[i])
+            self.stud_num.remove(self.stud_num[i])
+            self.stud_nam.remove(self.stud_nam[i])
+            self.course_num.remove(self.course_num[i])
+
+        print("Updated list of Students")
+        print("Names of students", self.stud_nam)
+        print("Student Number", self.stud_num)
+        print("Course Number", self.course_num)
 
 
 obj = Student()
