@@ -20,7 +20,7 @@ class Student:
         print(self.course_num)
 
     def retrieve(self):
-        for j in range(1,2):
+        for j in range(1, 2):
             for k in range(2, len(self.stud_num)):
                 if self.stud_num[j] < self.stud_num[k+1]:
                     continue
