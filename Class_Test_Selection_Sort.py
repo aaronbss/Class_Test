@@ -15,19 +15,21 @@ class Student:
     def add_value(self):
         n = int(input("Please enter the number of students you want to register"))
         for i in range(1, n+1):
-            try:                                                            # Trying to implement try & Catch.
-                a = int(input("Please enter the student number"))
-                if len(a) < 9:
+            try:                                                            # Implemented Try & Catch in order to
+                a = int(input("Please enter the student number"))           # let the user know when a wrong value has
+                if len(str(a)) < 9:                                         # been entered.
                     self.stud_num.append(a)
             except:
                 print("You have entered wrong student number")
+                break
             self.stud_nam.append(input("Please enter student name"))
             try:
                 b = int(input("Please enter the course ID"))
-                if len(b) < 8:
+                if len(str(b)) < 8:
                     self.course_num.append(b)
             except:
                 print("You have entered a wrong course id")
+                break
 
         print("Names of students", self.stud_nam)
         print("Student Number", self.stud_num)
