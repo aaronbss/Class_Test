@@ -20,7 +20,7 @@ class Student:
         for i in range(0, len(self.stud_num) - 1):
             min_index = i
             for j in range(i + 1, len(self.stud_num)):
-                if self.stud_num[j] < self.stud_num[min_index]:
+                if self.stud_num[j] < self.stud_num[min_index]:                                    
                     min_index = j
             if min_index != i:
                 self.stud_num[i], self.stud_num[min_index] = self.stud_num[min_index], self.stud_num[i]
